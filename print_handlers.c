@@ -73,7 +73,7 @@ int print_number(int is_negative, int ind, char buffer[],
 	else if (flags & F_SPACE)
 		extra_ch = ' ';
 
-	return (write_num(ind, buffer, flags, width, precision,
+	return (print_num(ind, buffer, flags, width, precision,
 		length, padd, extra_ch));
 }
 
@@ -201,8 +201,8 @@ int print_unsgnd(int is_negative, int indx,
  * @length: the Length of number
  * @width: the Width specifier
  * @flags: the Flags specifier
- * @padd: the Characters representing the padding
- * @extra_c: the Characters representing extra chars
+ * @padd: the characters representing the padding
+ * @extra_c: the characters representing extra chars
  * @padd_start: the Index which padding should start
  * Return: returns number of written characters.
  */
