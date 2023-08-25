@@ -207,7 +207,7 @@ int print_unsgnd(int is_negative, int indx,
  * Return: returns number of written characters.
  */
 
-int print_pointer(char buffer[], int indx, int length,
+int printed_pointer(char buffer[], int indx, int length,
 	int width, int flags, char padd, char extra_c, int padd_start)
 {
 	int k;
