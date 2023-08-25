@@ -47,7 +47,7 @@ int print_pointer(va_list types, char buffer[],
 
 	indx++;
 
-	return (write_pointer(buffer, indx, length,
+	return (printed_pointer(buffer, indx, length,
 		width, flags, padd, extra_c, padd_start));
 }
 
@@ -79,10 +79,10 @@ int print_non_printables(va_list types, char buffer[],
 
 	while (str[k] != '\0')
 	{
-		if (is_printable(str[k]))
+		if (is_printables(str[k]))
 			buffer[k + offset] = str[k];
 		else
-			offset += append_hexa_code(str[k], buffer, k + offset);
+			offset += append_hex_code(str[k], buffer, k + offset);
 
 		k++;
 	}
