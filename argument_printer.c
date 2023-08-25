@@ -17,7 +17,7 @@ int argument_print(const char *fmt, int *indx, va_list list, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int k, unknow_len = 0, printed_chars = -1;
-	fmt_t fmt_types[] = {
+	frmt_t fmt_types[] = {
 		{'c', print_chars}, {'s', print_str}, {'%', print_perc},
 		{'i', print_integer}, {'d', print_integer}, {'b', print_bin},
 		{'u', print_unsig}, {'o', print_octal}, {'x', print_hex},
