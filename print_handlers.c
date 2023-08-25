@@ -195,7 +195,7 @@ int print_unsgnd(int is_negative, int indx,
 }
 
 /**
- * print_pointer - prints memory address
+ * printed_pointer - prints memory address
  * @buffer: Arrays of chararacters
  * @indx: Index which the number starts in the buffer
  * @length: the Length of number
