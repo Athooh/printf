@@ -25,8 +25,8 @@ int is_printables(char m)
 
 int append_hex_code(char ascii_code, char buffer[], int k)
 {
-	char map_to[] = "0123456789ABCDEF"
-
+	char map_to[] = "0123456789ABCDEF";
+	
 	if (ascii_code < 0)
 		ascii_code *= -1;
 
