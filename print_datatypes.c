@@ -17,7 +17,7 @@ int print_chars(va_list types, char buffer[],
 {
 	char c = va_arg(types, int);
 
-	return (handle_write_char(c, buffer, flags, width, precision, size));
+	return (handle_write_chars(c, buffer, flags, width, precision, size));
 }
 
 /* PRINTs A STRING */
@@ -121,7 +121,7 @@ int print_integer(va_list types, char buffer[],
 	long int x = va_arg(types, long int);
 	unsigned long int num;
 
-	x = convert_size_number(x, size);
+	x = convert_size_num(x, size);
 
 	if (x == 0)
 		buffer[k--] = '0';
@@ -143,7 +143,7 @@ int print_integer(va_list types, char buffer[],
 
 	k++;
 
-	return (write_number(is_negative, k, buffer, flags, width, precision, size));
+	return (print_number(is_negative, k, buffer, flags, width, precision, size));
 }
 
 /* PRINT THE BINARY */
