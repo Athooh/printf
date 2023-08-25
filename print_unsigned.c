@@ -17,7 +17,7 @@ int print_unsig(va_list types, char buffer[],
 	int k = BUFF_SIZE - 2;
 	unsigned long int num = va_arg(types, unsigned long int);
 
-	num = convert_size_unsgnd(num, size);
+	num = convert_size_unsg(num, size);
 
 	if (num == 0)
 		buffer[k--] = '0';
@@ -32,7 +32,7 @@ int print_unsig(va_list types, char buffer[],
 
 	k++;
 
-	return (write_unsgnd(0, k, buffer, flags, width, precision, size));
+	return (print_unsgnd(0, k, buffer, flags, width, precision, size));
 }
 
 /**
@@ -56,7 +56,7 @@ int print_octal(va_list types, char buffer[],
 
 	UNUSED(width);
 
-	num = convert_size_unsgnd(num, size);
+	num = convert_size_unsg(num, size);
 
 	if (num == 0)
 		buffer[k--] = '0';
@@ -74,7 +74,7 @@ int print_octal(va_list types, char buffer[],
 
 	k++;
 
-	return (write_unsgnd(0, k, buffer, flags, width, precision, size));
+	return (print_unsgnd(0, k, buffer, flags, width, precision, size));
 }
 
 /**
@@ -135,7 +135,7 @@ int print_hexa(va_list types, char map_to[], char buffer[],
 
 	UNUSED(width);
 
-	num = convert_size_unsgnd(num, size);
+	num = convert_size_unsg(num, size);
 
 	if (num == 0)
 		buffer[k--] = '0';
@@ -156,5 +156,5 @@ int print_hexa(va_list types, char map_to[], char buffer[],
 
 	k++;
 
-	return (write_unsgnd(0, k, buffer, flags, width, precision, size));
+	return (print_unsgnd(0, k, buffer, flags, width, precision, size));
 }
