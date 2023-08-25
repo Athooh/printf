@@ -101,7 +101,7 @@ int print_number(int is_positive, int ind, char buffer[],
 	int flags, int width, int precision, int size);
 int print_num(int ind, char bff[], int flags, int width, int precision,
 	int length, char padd, char extra_c);
-int print_pointer(char buffer[], int ind, int length,
+int printed_pointer(char buffer[], int ind, int length,
 	int width, int flags, char padd, char extra_c, int padd_start);
 
 int print_unsgnd(int is_negative, int ind,
