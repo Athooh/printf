@@ -24,11 +24,11 @@ int argument_print(const char *fmt, int *indx, va_list list, char buffer[],
 		{'X', print_hex_upper}, {'p', print_pointer}, {'S', print_non_printables},
 		{'r', print_rev}, {'R', print_rot13str}, {'\0', NULL}
 	};
-	for (k = 0; fmt_types[k].fmt != '\0'; k++)
-		if (fmt[*indx] == fmt_types[k].fmt)
+	for (k = 0; fmt_types[k].frmt != '\0'; k++)
+		if (fmt[*indx] == fmt_types[k].frmt)
 			return (fmt_types[k].fn(list, buffer, flags, width, precision, size));
 
-	if (fmt_types[k].fmt == '\0')
+	if (fmt_types[k].frmt == '\0')
 	{
 		if (fmt[*indx] == '\0')
 			return (-1);
